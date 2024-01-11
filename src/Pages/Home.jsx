@@ -1,9 +1,13 @@
 import React from 'react'
 import landingImg from '../assets/Images/landing.png'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import ProjectCard from '../Components/ProjectCard'
 
 function Home() {
+    const navigate = useNavigate()
+    const handleProjectPage = ()=> {
+        navigate('/projects')
+    }
     return (
         <>
             {/* landing Part</>*/}
@@ -27,8 +31,8 @@ function Home() {
                 </div>
             </div>
             {/* all projects */}
-            <div className="project mt-5">
-                <h1 className='text-center mb-5'>Explore Our Projects</h1>
+            <div className="project">
+                <h1 className='text-center mb-5 text-dark'>Explore Our Projects</h1>
                 <marquee>
                 <div className="d-flex justify-content-between">
                     <div className="me-5">
@@ -37,7 +41,7 @@ function Home() {
                 </div>
                 </marquee>
                 <div className="text-center">
-                    <button className='btn btn-link'>View More Projects</button>
+                    <button onClick={handleProjectPage} className='btn btn-link'>View More Projects</button>
                 </div>
 
             </div>

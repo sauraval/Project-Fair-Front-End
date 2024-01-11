@@ -9,7 +9,6 @@ import Dashboard from './Pages/Dashboard'
 import Projects from './Pages/Projects'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
